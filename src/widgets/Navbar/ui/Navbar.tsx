@@ -12,7 +12,7 @@ interface NavbarProps {
 // Функциональный компонент Navbar
 export const Navbar = ({ className }: NavbarProps) => {
 	return (
-		<div className={classNames(s.Navbar)}>
+		<div className={classNames(s.Navbar, {}, [className])}>
 			{/* Блок с навигационными ссылками */}
 			<div className={s.links}>
 				<AppLink

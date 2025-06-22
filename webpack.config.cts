@@ -1,4 +1,4 @@
-import { ValidEventTypes } from "./node_modules/eventemitter3/index.d";
+
 import webpack from "webpack";
 import path from "path";
 
