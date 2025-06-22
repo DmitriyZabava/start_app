@@ -28,6 +28,7 @@ src/
 1. Клонируйте репозиторий:
     ```bash
     git clone <repo-url>
+    cd start_app-main
     ```
 2. Установите зависимости:
     ```bash
