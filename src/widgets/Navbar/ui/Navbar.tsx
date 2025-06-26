@@ -11,20 +11,20 @@ interface NavbarProps {
 
 // Функциональный компонент Navbar
 export const Navbar = ({ className }: NavbarProps) => {
-	return (
-		<div className={classNames(s.Navbar, {}, [className])}>
-			{/* Блок с навигационными ссылками */}
-			<div className={s.links}>
-				<AppLink
-					className={s.mainLink}
-					theme={AppLinkTheme.SECONDARY}
-					to={"/"}
-				>
-					{" "}
-					Главная{" "}
-				</AppLink>
-				<AppLink to={"/about"}> О Сайте </AppLink>
-			</div>
-		</div>
-	);
+    return (
+        <div className={classNames(s.Navbar, {}, [className])}>
+            {/* Блок с навигационными ссылками */}
+            <div className={s.links}>
+                <AppLink
+                    className={s.mainLink}
+                    theme={AppLinkTheme.SECONDARY}
+                    to={"/"}
+                >
+                    {" "}
+                    Главная{" "}
+                </AppLink>
+                <AppLink to={"/about"}> О Сайте </AppLink>
+            </div>
+        </div>
+    );
 };

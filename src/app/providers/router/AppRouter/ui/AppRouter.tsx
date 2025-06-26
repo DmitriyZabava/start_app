@@ -5,22 +5,22 @@ import { Routes, Route } from "react-router"; // Импорт компонент
 import { routeConfig } from "shared/config/routerConfig/routerConfig"; // Конфиг маршрутов
 
 export const AppRouter = () => {
-	return (
-		// Suspense позволяет показывать fallback во время загрузки ленивых компонентов
-		<Suspense fallback={<div> "Loading... " </div>}>
-			<Routes>
-				{/* Генерируем маршруты на основе конфигурации */}
-				{Object.values(routeConfig).map(({ element, path }) => (
-					<Route
-						key={path}
-						path={path}
-						// Оборачиваем каждый маршрут в div для стилизации
-						element={
-							<div className={"page-wrapper"}>{element}</div>
-						}
-					/>
-				))}
-			</Routes>
-		</Suspense>
-	);
+    return (
+    // Suspense позволяет показывать fallback во время загрузки ленивых компонентов
+        <Suspense fallback={<div>  Loading...  </div>}>
+            <Routes>
+                {/* Генерируем маршруты на основе конфигурации */}
+                {Object.values(routeConfig).map(({ element, path }) => (
+                    <Route
+                        key={path}
+                        path={path}
+                        // Оборачиваем каждый маршрут в div для стилизации
+                        element={
+                            <div className={"page-wrapper"}>{element}</div>
+                        }
+                    />
+                ))}
+            </Routes>
+        </Suspense>
+    );
 };

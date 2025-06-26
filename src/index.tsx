@@ -8,10 +8,10 @@ import { ThemeProvider } from "app/providers/ThemeProvider"; // Провайде
 // Получаем корневой DOM-элемент
 const root = createRoot(document.getElementById("root")!);
 root.render(
-	// Оборачиваем приложение в маршрутизатор и провайдер темы
-	<BrowserRouter>
-		<ThemeProvider>
-			<App />
-		</ThemeProvider>
-	</BrowserRouter>
+    // Оборачиваем приложение в маршрутизатор и провайдер темы
+    <BrowserRouter>
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
+    </BrowserRouter>
 );

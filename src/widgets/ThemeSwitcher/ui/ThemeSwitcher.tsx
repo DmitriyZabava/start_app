@@ -1,5 +1,4 @@
 // Компонент для переключения темы приложения
-import * as s from "./ThemeSwitcher.module.scss"; // Стили для ThemeSwitcher
 import { classNames } from "shared/lib/ClassNames/classNames"; // Утилита для объединения классов
 import { Button } from "shared/ui/Button"; // Кнопка
 import { Theme, useTheme } from "app/providers/ThemeProvider"; // Перечисление тем и хук
@@ -12,18 +11,19 @@ interface ThemeSwitcherProps {
 	className?: string; // Дополнительный CSS-класс
 }
 
+
 // Функциональный компонент ThemeSwitcher
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-	const { theme, toggleTheme } = useTheme(); // Получаем текущую тему и функцию переключения
+    const { theme, toggleTheme } = useTheme(); // Получаем текущую тему и функцию переключения
 
-	return (
-		<Button
-			theme={ButtonTheme.CLEAR}
-			className={classNames(s.ThemeSwitcher, {}, [className])}
-			onClick={toggleTheme} // Переключаем тему по клику
-		>
-			{/* Показываем иконку в зависимости от текущей темы */}
-			{theme === Theme.DARK ? <Moon /> : <Sun />}
-		</Button>
-	);
+    return (
+        <Button
+            theme={ButtonTheme.CLEAR}
+            className={classNames("ThemeSwitcher", {}, [className])}
+            onClick={toggleTheme} // Переключаем тему по клику
+        >
+            {/* Показываем иконку в зависимости от текущей темы */}
+            {theme === Theme.DARK ? <Moon /> : <Sun />}
+        </Button>
+    );
 };

@@ -9,15 +9,15 @@ type Mods = Record<string, boolean | string>;
 // mods — объект с модификаторами (дополнительные классы по условию)
 // additional — массив дополнительных классов
 export function classNames(
-	cls: string,
-	mods: Mods = {},
-	additional: string[] = []
+    cls: string,
+    mods: Mods = {},
+    additional: string[] = []
 ): string {
-	return [
-		cls,
-		...additional.filter(Boolean), // Добавляем только непустые дополнительные классы
-		Object.entries(mods)
-			.filter(([className, value]) => Boolean(value)) // Оставляем только те, где значение true/непустое
-			.map(([className, value]) => className), // Берём имя класса
-	].join(" "); // Объединяем в одну строку через пробел
+    return [
+        cls,
+        ...additional.filter(Boolean), // Добавляем только непустые дополнительные классы
+        Object.entries(mods) // eslint-disable-next-line
+            .filter(([className, value]) => Boolean(value)) // eslint-disable-next-line
+            .map(([className, value]) => className), // Берём имя класса
+    ].join(" "); // Объединяем в одну строку через пробел
 }

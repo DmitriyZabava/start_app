@@ -3,13 +3,16 @@ import { createContext } from "react";
 
 // Перечисление доступных тем
 export enum Theme {
+	// eslint-disable-next-line
 	LIGHT = "light", // Светлая тема
+	// eslint-disable-next-line
 	DARK = "dark", // Тёмная тема
 }
 
 // Интерфейс для значений контекста темы
 export interface ThemeContextProps {
 	theme?: Theme; // Текущая тема
+	// eslint-disable-next-line
 	setTheme?: (theme: Theme) => void; // Функция для изменения темы
 }
 

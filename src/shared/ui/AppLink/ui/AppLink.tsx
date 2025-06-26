@@ -6,7 +6,9 @@ import { FC } from "react";
 
 // Темы оформления ссылки
 export enum AppLinkTheme {
+    // eslint-disable-next-line
 	PRIMARY = "primary", // Основная тема
+    // eslint-disable-next-line
 	SECONDARY = "secondary", // Вторичная тема
 }
 
@@ -18,20 +20,21 @@ interface AppLinkProps extends LinkProps {
 
 // Функциональный компонент ссылки
 export const AppLink: FC<AppLinkProps> = (props) => {
-	const {
-		className,
-		children,
-		to,
-		theme = AppLinkTheme.PRIMARY, // Тема по умолчанию
-		...otherProps
-	} = props;
-	return (
-		<Link
-			to={to}
-			className={classNames(s.AppLink, {}, [className, s[theme]])} // Формируем итоговый класс
-			{...otherProps}
-		>
-			{children} {/* Контент ссылки */}
-		</Link>
-	);
+    const {
+        className,
+        children,
+        to,
+        theme = AppLinkTheme.PRIMARY, // Тема по умолчанию
+        ...otherProps
+    } = props;
+    return (
+        <Link
+            to={to}
+            className={classNames(s.AppLink, {}, [className, s[theme]])} // Формируем итоговый класс
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...otherProps}
+        >
+            {children} {/* Контент ссылки */}
+        </Link>
+    );
 };

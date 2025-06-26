@@ -6,6 +6,7 @@ import { classNames } from "shared/lib/ClassNames/classNames"; // Утилита
 
 // Темы оформления кнопки
 export enum ButtonTheme {
+    // eslint-disable-next-line
 	CLEAR = "clear", // Прозрачная кнопка
 }
 
@@ -17,14 +18,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 // Функциональный компонент кнопки
 export const Button: FC<ButtonProps> = (props) => {
-	const { className, theme, children, ...otherProps } = props;
+    const { className, theme, children, ...otherProps } = props;
 
-	return (
-		<button
-			className={classNames(s.Button, {}, [className, s[theme]])} // Формируем итоговый класс
-			{...otherProps}
-		>
-			{children} {/* Контент кнопки */}
-		</button>
-	);
+    return (
+        <button
+            className={classNames(s.Button, {}, [className, s[theme]])} // Формируем итоговый класс
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...otherProps}
+        >
+            {children} {/* Контент кнопки */}
+        </button>
+    );
 };
