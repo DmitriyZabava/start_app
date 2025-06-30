@@ -13,11 +13,15 @@ export function classNames(
     mods: Mods = {},
     additional: string[] = []
 ): string {
+    const modsClasses = Object.entries(mods) // eslint-disable-next-line
+        .filter(([_, value]) => Boolean(value))
+        .map(([className]) => className)
+        .filter(Boolean)
+        .join(" ");
     return [
         cls,
         ...additional.filter(Boolean), // Добавляем только непустые дополнительные классы
-        Object.entries(mods) // eslint-disable-next-line
-            .filter(([className, value]) => Boolean(value)) // eslint-disable-next-line
-            .map(([className, value]) => className), // Берём имя класса
-    ].join(" "); // Объединяем в одну строку через пробел
+        modsClasses
+    ].filter(part => part !== "")
+        .join(" ").trim(); // Объединяем в одну строку через пробел
 }
