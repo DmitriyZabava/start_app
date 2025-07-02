@@ -1,10 +1,6 @@
 import { lazy } from "react";
+import { delayFuncyion } from "shared/lib/Delay/delayFunc";
 
-export const AboutPageAsync = lazy(
-    () =>
-        new Promise((resolve) => {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            setTimeout(() => resolve(import("./AboutPage")), 2000);
-        })
+export const AboutPageAsync = lazy(()=>
+    delayFuncyion(import("./AboutPage"))
 );

@@ -1,2 +1,3 @@
 // Экспорт компонента маршрутизации приложения
-export { AppRouter } from "./ui/AppRouter";
+import AppRouter from "./ui/AppRouter";
+export default AppRouter;
