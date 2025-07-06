@@ -1,6 +1,6 @@
 // Компонент маршрутизации приложения
 import { Suspense } from "react"; // Импорт для ленивой загрузки
-import { Routes, Route } from "react-router"; // Импорт компонентов маршрутизации
+import { Routes, Route } from "react-router-dom"; // Импорт компонентов маршрутизации
 
 import { routeConfig } from "shared/config/routerConfig/routerConfig";
 import { PageLoader } from "widgets/PageLoader"; // Конфиг маршрутов

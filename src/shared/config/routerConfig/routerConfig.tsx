@@ -1,6 +1,6 @@
 // Конфигурация маршрутов приложения
 import { RouteProps } from "react-router-dom"; // Тип для описания маршрута
-import MainPage from "pages/MainPage/ui/MainPage"; // Главная страница
+import { MainPage } from "pages/MainPage"; // Главная страница
 import { AboutPage } from "pages/AboutPage";
 import { NotFoundPage } from "pages/NotFoundPage"; // Страница "О сайте"
 

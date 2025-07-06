@@ -30,6 +30,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     return (
         <Link
             to={to}
+            prefetch={"none"}
             className={classNames(s.AppLink, {}, [className, s[theme]])} // Формируем итоговый класс
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
